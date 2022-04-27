@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, Input } from '@angular/core';
 import { HighlightService } from '../highlight.service';
 
 @Component({
@@ -6,7 +6,8 @@ import { HighlightService } from '../highlight.service';
   template: `
     {{service.highlight(el)}}
      <div (click)="onClick()">Similar jobs</div>
-  `
+  `,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SimilarJobsComponent {
   @Input() jobId: any;

@@ -1,4 +1,4 @@
-import { Component, ElementRef } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef } from '@angular/core';
 import { HighlightService } from '../highlight.service';
 
 @Component({
@@ -17,7 +17,8 @@ import { HighlightService } from '../highlight.service';
               <app-footer></app-footer>
           </li>
         </ul>
-  `
+  `,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ShellComponent {
   constructor(

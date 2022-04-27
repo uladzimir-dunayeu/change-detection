@@ -4,7 +4,7 @@ import { ApplicationRef, Component } from '@angular/core';
   selector: 'app-root',
   template: `
     <div>
-      <h1>ChangeDetectionStrategy.Default</h1>
+      <h1>ChangeDetectionStrategy.OnPush</h1>
       <button (click)="app.tick()">Trigger Change Detection</button>
     </div>
     <div class="tree">

@@ -1,4 +1,4 @@
-import { Component, ElementRef } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef } from '@angular/core';
 import { HighlightService } from '../highlight.service';
 
 @Component({
@@ -20,7 +20,8 @@ import { HighlightService } from '../highlight.service';
               <app-similar-jobs [jobId]="jobId"></app-similar-jobs>
           </li>
         </ul>
-  `
+  `,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class JobDetailsComponent {
   jobId = 0;
