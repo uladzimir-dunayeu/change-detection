@@ -101,6 +101,5 @@
         }
       }
     }
-  },
-  "defaultProject": "change-detection"
+  }
 }
