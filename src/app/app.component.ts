@@ -1,24 +1,29 @@
-import { ApplicationRef, Component } from '@angular/core';
+import { ApplicationRef, Component, inject } from '@angular/core';
 
 @Component({
-    selector: 'app-root',
-    template: `
+  selector: 'app-root',
+  template: `
     <div>
       <h1>ChangeDetectionStrategy.Default</h1>
-      <button (click)="app.tick()">Trigger Change Detection</button>
+      <button (click)="appRef.tick()">Trigger Change Detection</button>
     </div>
     <div class="tree">
       <ul>
         <li>
-          <app-shell></app-shell>
+          <!--          {{service.highlight(el)}}-->
+          <div>1</div>
+        </li>
+        <li>
+          <div>1</div>
+        </li>
+        <li>
+          <div>1</div>
         </li>
       </ul>
     </div>
-    <div style="margin-bottom: 5em; clear: both;"></div>
   `,
-    standalone: false
+  standalone: true,
 })
 export class AppComponent {
-  constructor(public app: ApplicationRef) {
-  }
+  public appRef = inject(ApplicationRef);
 }

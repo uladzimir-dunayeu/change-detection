@@ -1,13 +1,12 @@
-import { Injectable, NgZone } from '@angular/core';
+import { ElementRef, inject, Injectable, NgZone } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class HighlightService {
+  private zone = inject(NgZone);
 
-  constructor(private zone: NgZone) {}
-
-  highlight(el: any): void {
+  highlight(el: ElementRef): void {
     const a = el.nativeElement.querySelector('div');
     a.classList.add('checked');
     this.zone.runOutsideAngular(() => {
