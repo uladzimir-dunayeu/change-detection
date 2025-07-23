@@ -2,8 +2,8 @@ import { Component, ElementRef } from '@angular/core';
 import { HighlightService } from '../highlight.service';
 
 @Component({
-  selector: 'app-job-details',
-  template: `
+    selector: 'app-job-details',
+    template: `
     {{service.highlight(el)}}
         <div (click)="onClick()">
           Job details<br>
@@ -20,7 +20,8 @@ import { HighlightService } from '../highlight.service';
               <app-similar-jobs [jobId]="jobId"></app-similar-jobs>
           </li>
         </ul>
-  `
+  `,
+    standalone: false
 })
 export class JobDetailsComponent {
   jobId = 0;

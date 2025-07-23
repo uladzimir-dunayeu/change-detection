@@ -2,8 +2,8 @@ import { Component, ElementRef } from '@angular/core';
 import { HighlightService } from '../highlight.service';
 
 @Component({
-  selector: 'app-shell',
-  template: `
+    selector: 'app-shell',
+    template: `
     {{service.highlight(el)}}
         <div (click)="onClick()">Shell component</div>
         <ul>
@@ -17,7 +17,8 @@ import { HighlightService } from '../highlight.service';
               <app-footer></app-footer>
           </li>
         </ul>
-  `
+  `,
+    standalone: false
 })
 export class ShellComponent {
   constructor(

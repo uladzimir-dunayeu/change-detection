@@ -1,8 +1,8 @@
 import { ApplicationRef, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  template: `
+    selector: 'app-root',
+    template: `
     <div>
       <h1>ChangeDetectionStrategy.Default</h1>
       <button (click)="app.tick()">Trigger Change Detection</button>
@@ -15,7 +15,8 @@ import { ApplicationRef, Component } from '@angular/core';
       </ul>
     </div>
     <div style="margin-bottom: 5em; clear: both;"></div>
-  `
+  `,
+    standalone: false
 })
 export class AppComponent {
   constructor(public app: ApplicationRef) {

@@ -2,11 +2,12 @@ import { Component, ElementRef, Input } from '@angular/core';
 import { HighlightService } from '../highlight.service';
 
 @Component({
-  selector: 'app-job-details-description',
-  template: `
+    selector: 'app-job-details-description',
+    template: `
     {{service.highlight(el)}}
      <div (click)="onClick()">Job details description</div>
-  `
+  `,
+    standalone: false
 })
 export class JobDetailsDescriptionComponent {
   @Input() jobId: any;

@@ -2,11 +2,12 @@ import { Component, ElementRef } from '@angular/core';
 import { HighlightService } from '../highlight.service';
 
 @Component({
-  selector: 'app-header',
-  template: `
+    selector: 'app-header',
+    template: `
     {{service.highlight(el)}}
      <div (click)="onClick()">Header</div>
-  `
+  `,
+    standalone: false
 })
 export class HeaderComponent {
   constructor(
